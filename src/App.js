@@ -4,7 +4,7 @@ import './styles/app.scss';
 import './styles/_variables.scss';
 import './styles/_mixins.scss';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Homepage from './components/homepage/homepage';
 import PortfolioHome from './components/portfolio/portfoliohome/portfoliohome';
