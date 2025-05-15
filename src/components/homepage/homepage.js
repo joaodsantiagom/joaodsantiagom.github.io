@@ -6,12 +6,7 @@ function Homepage() {
   return (
     <div className="homepage">
       <h1>Hi, I'm João</h1>
-      <p>Here are some of my use case studies soon:</p>
-      <ul>
-        <li><Link to="/unbox">Unbox</Link></li>
-        <li><Link to="/dnsmanager">DNS Manager</Link></li>
-        <li><Link to="/freelance">Freelance</Link></li>
-      </ul>
+      <p>More soon</p>
     </div>
   );
 }
