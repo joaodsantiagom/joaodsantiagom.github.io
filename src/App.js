@@ -4,10 +4,10 @@ import './styles/app.scss';
 import './styles/_variables.scss';
 import './styles/_mixins.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from './components/homepage';
-import Unbox from './components/unbox';
-import DNSmanager from './components/dnsmanager';
-import Freelance from './components/freelance';
+import Homepage from './components/homepage/homepage';
+import Unbox from './components/unbox/unbox';
+import DNSmanager from './components/dnsmanager/dnsmanager';
+import Freelance from './components/freelance/freelance';
 
 import logo from './logo.svg';
 
