@@ -7,9 +7,10 @@ function Freelance() {
     <div className="freelance">
       <h1>Freelance use case coming soon...</h1>
       <ul>
-        <li><Link to="/">Homepage</Link></li>
-        <li><Link to="/unbox">Unbox</Link></li>
-        <li><Link to="/dnsmanager">DNS Manager</Link></li>
+        <li><Link to="/portfolio">Homepage</Link></li>
+        <li><Link to="/portfolio/unbox">Unbox</Link></li>
+        <li><Link to="/portfolio/dnsmanager">DNS Manager</Link></li>
+        <li><Link to="/portfolio/freelance">Freelance</Link></li>
       </ul>
     </div>
   );
