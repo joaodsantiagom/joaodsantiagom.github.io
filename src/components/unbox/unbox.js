@@ -1,18 +1,18 @@
 import React from 'react';
-import './freelance.css';
+import './unbox.scss';
 import { Link } from 'react-router-dom';
 
-function Freelance() {
+function Unbox() {
   return (
-    <div className="freelance">
-      <h1>Freelance use case</h1>
+    <div className="unbox">
+      <h1>Unbox use case coming soon...</h1>
       <ul>
         <li><Link to="/">Homepage</Link></li>
-        <li><Link to="/unbox">Unbox</Link></li>
         <li><Link to="/dnsmanager">DNS Manager</Link></li>
+        <li><Link to="/freelance">Freelance</Link></li>
       </ul>
     </div>
   );
 }
 
-export default Freelance;
+export default Unbox;

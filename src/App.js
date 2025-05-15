@@ -1,6 +1,8 @@
 import React from 'react';
 
-import './App.css';
+import './styles/App.scss';
+import './styles/_variables.scss';
+import './styles/_mixins.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './components/homepage';
 import Unbox from './components/unbox';

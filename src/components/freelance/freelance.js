@@ -1,18 +1,18 @@
 import React from 'react';
-import './dnsmanager.css';
+import './freelance.scss';
 import { Link } from 'react-router-dom';
 
-function DNSmanager() {
+function Freelance() {
   return (
-    <div className="dnsmanager">
-      <h1>DNS Manager use case</h1>
+    <div className="freelance">
+      <h1>Freelance use case coming soon...</h1>
       <ul>
         <li><Link to="/">Homepage</Link></li>
         <li><Link to="/unbox">Unbox</Link></li>
-        <li><Link to="/freelance">Freelance</Link></li>
+        <li><Link to="/dnsmanager">DNS Manager</Link></li>
       </ul>
     </div>
   );
 }
 
-export default DNSmanager;
+export default Freelance;
