@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles/App.scss';
+import './styles/app.scss';
 import './styles/_variables.scss';
 import './styles/_mixins.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
