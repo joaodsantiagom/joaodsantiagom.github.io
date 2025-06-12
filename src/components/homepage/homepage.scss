@@ -102,9 +102,6 @@
           ul {
                list-style: none;
                padding: 1rem 0;
-               opacity: 0;
-               animation: fadeIn 0.6s ease forwards;
-               animation-delay: 0.8s;
                
                li {
                     margin: 0;
@@ -127,9 +124,25 @@
                     }
                }
 
-               .contact.email {&::before {background-image: url('assets/email.svg'); }}
-               .contact.linkedin {&::before {background-image: url('assets/linkedin.svg'); }}
-               .contact.pin {&::before {background-image: url('assets/pin.svg'); }}
+               .contact.email {
+                    opacity: 0;
+                    animation: fadeIn 0.6s ease forwards;
+                    animation-delay: 0.8s;
+
+                    &::before {background-image: url('assets/email.svg'); }
+               }
+               .contact.linkedin {
+                    opacity: 0;
+                    animation: fadeIn 0.6s ease forwards;
+                    animation-delay: 0.9s;
+                    &::before {background-image: url('assets/linkedin.svg'); }
+               }
+               .contact.pin {
+                    opacity: 0;
+                    animation: fadeIn 0.6s ease forwards;
+                    animation-delay: 1s;
+                    &::before {background-image: url('assets/pin.svg'); }
+               }
                
                a {
                     text-decoration: underline; 
