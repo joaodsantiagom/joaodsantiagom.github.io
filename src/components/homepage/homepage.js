@@ -13,7 +13,7 @@ function Homepage() {
                     <h2 className='title'>João Santiago</h2>
                     <p className='text'>
                          UX designer with 10+ years of experience building web products.
-                         Open to new projects, reach out if you'd like to see my previous work.
+                         Open to new projects, reach out if you'd like to see my work.
                     </p>
                     <ul className='contacts'>
                          <li><a className='contact email' href='mailto:joaodsantiagom@gmail.com'>Email me</a></li>
