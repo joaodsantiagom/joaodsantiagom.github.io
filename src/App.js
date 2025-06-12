@@ -15,17 +15,17 @@ import Freelance from './components/portfolio/freelance/freelance';
 import logo from './logo.svg';
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Homepage />} />
-        <Route path="/portfolio" element={<PortfolioHome />} />
-        <Route path="/portfolio/unbox" element={<Unbox />} />
-        <Route path="/portfolio/dnsmanager" element={<DNSManager />} />
-        <Route path="/portfolio/freelance" element={<Freelance />} />
-      </Routes>
-    </Router>
-  );
+     return (
+          <Router>
+               <Routes>
+                    <Route exact path='/' element={<Homepage />} />
+                    <Route path='/portfolio' element={<PortfolioHome />} />
+                    <Route path='/portfolio/unbox' element={<Unbox />} />
+                    <Route path='/portfolio/dnsmanager' element={<DNSManager />} />
+                    <Route path='/portfolio/freelance' element={<Freelance />} />
+               </Routes>
+          </Router>
+     );
 }
 
 export default App;

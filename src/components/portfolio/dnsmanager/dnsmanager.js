@@ -3,17 +3,25 @@ import './dnsmanager.scss';
 import { Link } from 'react-router-dom';
 
 function DNSmanager() {
-  return (
-    <div className="dnsmanager">
-      <h1>DNS Manager use case coming soon...</h1>
-      <ul>
-        <li><Link to="/portfolio">Homepage</Link></li>
-        <li><Link to="/portfolio/unbox">Unbox</Link></li>
-        <li><Link to="/portfolio/dnsmanager">DNS Manager</Link></li>
-        <li><Link to="/portfolio/freelance">Freelance</Link></li>
-      </ul>
-    </div>
-  );
+     return (
+          <div className='dnsmanager'>
+               <h1>DNS Manager use case coming soon...</h1>
+               <ul>
+                    <li>
+                         <Link to='/portfolio'>Homepage</Link>
+                    </li>
+                    <li>
+                         <Link to='/portfolio/unbox'>Unbox</Link>
+                    </li>
+                    <li>
+                         <Link to='/portfolio/dnsmanager'>DNS Manager</Link>
+                    </li>
+                    <li>
+                         <Link to='/portfolio/freelance'>Freelance</Link>
+                    </li>
+               </ul>
+          </div>
+     );
 }
 
 export default DNSmanager;

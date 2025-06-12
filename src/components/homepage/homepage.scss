@@ -1,5 +1,162 @@
 /* homepage.css */
+
+@import '../../styles/variables.scss';
+
+@keyframes wave-animation {
+     0% { transform: rotate( 0.0deg) }
+     8% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     16% { transform: rotate(-8.0deg) }
+     24% { transform: rotate(14.0deg) }
+     32% { transform: rotate(-4.0deg) }
+     40% { transform: rotate(10.0deg) }
+     48% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+     100% { transform: rotate( 0.0deg) }
+}
+
+@keyframes wave-fadeIn {
+     from { opacity: 0; transform: translateX(-0.75rem) translateY(0.75rem) scale(0.25);}
+     to { opacity: 1; transform: translateX(0) translateY(0) scale(1);}
+}
+
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+          transform: translateY(10px);
+     }
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
 .homepage {
-  font-size: 24px;
-  text-align: center;
+     max-width: 40rem;
+     padding: 12rem 4rem 2rem 2rem; 
+     text-align: left;
+     margin: 0 auto;
+     width: auto;
+
+     @media (max-width: $breakpoint-lg) { padding: 8rem 3rem 2rem 2rem; }
+     @media (max-width: $breakpoint-sm) { padding: 8rem 2rem 2rem; }
+
+     .intro {
+          position: relative;
+          margin: 0 auto;
+
+          .photo-container {
+               position: relative;
+               width: 7rem;
+               height: 7rem;
+               margin-bottom: 3rem;
+               opacity: 0;
+               animation: fadeIn 0.6s ease forwards;
+               animation-delay: 0.2s;
+          }
+
+          .photo {
+               width: 7rem;
+               height: 7rem;
+               border-radius: 50%;
+               box-shadow: 0px 8px 12px $shadow-primary-color;
+          }
+
+          .wave {
+               position: absolute;
+               top: -5%;
+               left: 105%;
+               width: 2rem;
+               height: 2rem;
+               opacity: 0;
+               animation: wave-fadeIn 0.2s ease-out forwards;
+               animation-delay: 1.2s;
+               &::before {
+                    content: '';
+                    width: 2rem;
+                    height: 2rem;
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                    background-image: url('assets/wave.png');
+                    background-size: cover;
+                    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+                    animation-duration: 2.8s;        /* Change to speed up or slow down */
+                    animation-delay: 1.1s;
+                    animation-iteration-count: infinite;  /* Never stop waving :) */
+                    transform-origin: 30% 70%;       /* Pivot around the bottom-left palm */
+                    display: inline-block;
+               }
+          }
+
+          .title {
+               opacity: 0;
+               animation: fadeIn 0.6s ease forwards;
+               animation-delay: 0.4s;
+          }
+
+          .text {
+               opacity: 0;
+               animation: fadeIn 0.6s ease forwards;
+               animation-delay: 0.6s;
+          }
+
+          ul {
+               list-style: none;
+               padding: 1rem 0;
+               opacity: 0;
+               animation: fadeIn 0.6s ease forwards;
+               animation-delay: 0.8s;
+               
+               li {
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 1rem;
+                    line-height: 2rem;
+               }
+               .contact {
+                    display: inline-block;
+                    color: $neutral-color;
+                    line-height: 2rem;
+                    &::before {
+                         content: '';
+                         width: 1.5rem;
+                         height: 1.5rem;
+                         vertical-align: middle;
+                         display: inline-block;
+                         color: inherit;
+                         margin: 0 1rem 0 0;
+                    }
+               }
+
+               .contact.email {&::before {background-image: url('assets/email.svg'); }}
+               .contact.linkedin {&::before {background-image: url('assets/linkedin.svg'); }}
+               .contact.pin {&::before {background-image: url('assets/pin.svg'); }}
+               
+               a {
+                    text-decoration: underline; 
+                    text-decoration-thickness: 1px;
+                    &::after {
+                         content: '';
+                         width: 1.5rem;
+                         height: 1.5rem;
+                         vertical-align: middle;
+                         display: inline-block;
+                         color: inherit;
+                         margin: 0 0 0 0.75rem;
+                         background-image: url('assets/arrow.svg');
+                         opacity: 0;
+                         transform: translateX(-0.5rem) translateY(0.5rem);
+                         transition: transform 0.15s ease-out 0.05s, opacity 0.15s ease-out 0.05s;
+                    }
+                    &:hover {
+                         text-decoration: none;
+                    }
+                    &:hover::after {
+                         transform: translateX(0) translateY(0);
+                         opacity: 1;
+
+                         
+                    }
+               }
+          }
+     }
 }

@@ -1,4 +1,14 @@
 /* _variables.scss */
 
+// Colors
 $neutral-color: #111111;
-$primary-color: #0066FF;
+$primary-color: #0066ff;
+
+// Shadows
+$shadow-primary-color: rgba(0, 102, 255, .15);
+
+// Media Queries
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
